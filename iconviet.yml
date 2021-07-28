@@ -105,7 +105,6 @@ services:
       - 15672
       - 25672
     networks:
-      - iconloop    
       - iconviet
     image: iconviet/rabbitmq
     environment:
@@ -165,7 +164,6 @@ services:
 
   portainer:
     networks:
-      - iconloop
       - iconviet
     ports:
       - 9900:9000
