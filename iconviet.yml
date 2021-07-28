@@ -10,20 +10,23 @@ services:
   # SEQ
   #****
 
-#  seq:
-#    networks:
-#      - iconviet
-#    ports:
-#      - 5341
-#      - 5342:80
-#    image: iconviet/seq
-#    environment:
-#      ACCEPT_EULA: "Y"
-#      TZ: "Asia/Ho_Chi_Minh"
-#    deploy:
-#      placement:
-#        constraints:
-#          - node.role == manager
+  seq:
+    networks:
+      - iconviet
+    ports:
+     - 5341
+      - 5342:80
+    image: iconviet/seq
+    environment:
+      ACCEPT_EULA: "Y"
+      TZ: "Asia/Ho_Chi_Minh"
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+      placement:
+        constraints:
+          - node.role == manager
 
   #******
   # MSSQL
