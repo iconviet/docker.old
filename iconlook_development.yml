@@ -38,7 +38,7 @@ services:
     environment:
       TZ: "Asia/Ho_Chi_Minh"
       ENVIRONMENT: "development"
-      CITIZEN_URL: "http://172.18.0.1:9000"
+      CITIZEN_URL: "http://140.82.11.203:9000"
       TRACKER_URL: "https://tracker.icon.foundation"
     image: iconviet.azurecr.io/iconlook_development_web
 
@@ -65,7 +65,7 @@ services:
     environment:
       TZ: "Asia/Ho_Chi_Minh"
       ENVIRONMENT: "development"
-      CITIZEN_URL: "http://172.18.0.1:9000"
+      CITIZEN_URL: "http://140.82.11.203:9000"
       TRACKER_URL: "https://tracker.icon.foundation"
     image: iconviet.azurecr.io/iconlook_development_api
 
@@ -87,7 +87,7 @@ services:
     environment:
       TZ: "Asia/Ho_Chi_Minh"
       ENVIRONMENT: "development"
-      CITIZEN_URL: "http://172.18.0.1:9000"
+      CITIZEN_URL: "http://140.82.11.203:9000"
       TRACKER_URL: "https://tracker.icon.foundation"
     image: iconviet.azurecr.io/iconlook_development_job
 
@@ -109,6 +109,6 @@ services:
     environment:
       TZ: "Asia/Ho_Chi_Minh"
       ENVIRONMENT: "development"
-      CITIZEN_URL: "http://172.18.0.1:9000"
+      CITIZEN_URL: "http://140.82.11.203:9000"
       TRACKER_URL: "https://tracker.icon.foundation"
     image: iconviet.azurecr.io/iconlook_development_mon
