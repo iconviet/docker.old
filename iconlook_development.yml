@@ -1,8 +1,6 @@
 version: "3.8"
 
 networks:
-  iconloop:
-    external: true
   iconviet:
     external: true
   iconviet_development:
@@ -21,7 +19,6 @@ services:
         protocol: tcp
         published: 8300
     networks:
-      - iconloop
       - iconviet
       - iconviet_development
     deploy:
@@ -53,7 +50,6 @@ services:
         protocol: tcp
         published: 8301    
     networks:
-      - iconloop
       - iconviet
       - iconviet_development
     deploy:
@@ -75,7 +71,6 @@ services:
 
   job:
     networks:
-      - iconloop
       - iconviet
       - iconviet_development
     deploy:
@@ -97,7 +92,6 @@ services:
 
   mon:
     networks:
-      - iconloop
       - iconviet
       - iconviet_development
     deploy:
