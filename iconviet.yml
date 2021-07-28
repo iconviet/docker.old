@@ -40,6 +40,9 @@ services:
     volumes:
       - ~/mssql:/var/opt/mssql
     deploy:
+      resources:
+        limits:
+          memory: 2048M
       placement:
         constraints:
           - node.role == manager
@@ -64,6 +67,9 @@ services:
     volumes:
        - ~/redis:/var/lib/redis
     deploy:
+      resources:
+        limits:
+          memory: 512M
       placement:
         constraints:
           - node.role == manager
@@ -110,6 +116,9 @@ services:
     environment:
       TZ: "Asia/Ho_Chi_Minh"
     deploy:
+      resources:
+        limits:
+          memory: 512M
       placement:
         constraints:
           - node.role == manager
@@ -133,6 +142,9 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     deploy:
       replicas: 3
+      resources:
+        limits:
+          memory: 256M
       placement:
         preferences:
           - spread: node.labels.zone
@@ -151,6 +163,9 @@ services:
     environment:
       TZ: "Asia/Ho_Chi_Minh"
     deploy:
+      resources:
+        limits:
+          memory: 256M
       placement:
         constraints:
           - node.role == manager
@@ -171,6 +186,9 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     image: iconviet/portainer
     deploy:
+      resources:
+        limits:
+          memory: 128M
       placement:
         constraints:
           - node.role == manager
@@ -189,6 +207,9 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     image: iconviet/dockupdater
     deploy:
+      resources:
+        limits:
+          memory: 128M
       placement:
         constraints:
           - node.role == manager
@@ -221,6 +242,9 @@ services:
        - ~/redis:/var/lib/redis
     deploy:
       replicas: 2
+      resources:
+        limits:
+          memory: 256M
       placement:
         max_replicas_per_node: 1
         constraints:
@@ -244,7 +268,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.25'
+          cpus: 0.25
+          memory: 512M
       placement:
         constraints:
           - node.role == manager
