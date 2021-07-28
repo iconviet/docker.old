@@ -23,9 +23,6 @@ services:
       - iconviet_development
     deploy:
       replicas: 3
-      resources:
-        limits:
-          memory: 512M
       placement:
         max_replicas_per_node: 1
         preferences:
@@ -57,9 +54,6 @@ services:
       - iconviet_development
     deploy:
       replicas: 3
-      resources:
-        limits:
-          memory: 512M
       placement:
         max_replicas_per_node: 1
         preferences:
@@ -81,9 +75,6 @@ services:
       - iconviet_development
     deploy:
       replicas: 1
-      resources:
-        limits:
-          memory: 512M
       placement:
         max_replicas_per_node: 1
         constraints:
@@ -105,9 +96,6 @@ services:
       - iconviet_development
     deploy:
       replicas: 1
-      resources:
-        limits:
-          memory: 512M
       placement:
         max_replicas_per_node: 1
         constraints:
